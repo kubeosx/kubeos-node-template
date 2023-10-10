@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.serviceName | dump }}
+  annotations:
+    github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: ${{values.serviceName | dump}}
+    backstage.io/kubernetes-namespace: ${{values.project_k8_namespace | dump}}
+  tags:
+    - nodejs
+    - webapi
+spec:
+  type: service
+  lifecycle: experimental
+  owner: ${{values.owner | dump}}

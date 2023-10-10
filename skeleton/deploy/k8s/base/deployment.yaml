@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${{values.serviceName}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${{values.serviceName}}
+  template:
+    metadata:
+      annotations:
+        backstage.io/kubernetes-id: ${{values.serviceName | dump}}
+    spec:
+      containers:
+        - name: my-${{values.serviceName}}
+          image: ${{values.docker_username}}/${{values.serviceName}}:1
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 200m
+              memory: 500Mi

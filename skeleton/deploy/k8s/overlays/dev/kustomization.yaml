@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: ${{values.serviceName}}
+namespace: ${{values.project_k8_namespace}}
+bases:
+  - ../../base
+commonAnnotations:
+  app: ${{values.serviceName}}
+  backstage.io/kubernetes-id: ${{values.serviceName | dump}}
+commonLabels:
+  app: ${{values.serviceName}}
+  backstage.io/kubernetes-id: ${{values.serviceName | dump}}
+# patchesStrategicMerge:
+# - configmap_patch.yaml
