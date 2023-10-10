@@ -1,11 +1,12 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: backstage-test-template
+  name: kubeos-node-template
   title: Node App with GitHub Actions
   description: Create a Node service with GitHub Actions workflows, build docker image and deploy to kubernetes
   tags:
     - recommended
+    - nodejs
 spec:
   owner: sourabh.rustagi@hotmail.com
   type: service
