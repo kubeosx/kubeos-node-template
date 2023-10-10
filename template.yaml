@@ -36,7 +36,7 @@ spec:
         system:
           title: Owner
           type: string
-          description: Owner of the component
+          description: System of the component
           ui:field: EntityPicker
           ui:options:
             catalogFilter:
