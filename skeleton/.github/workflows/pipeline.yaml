@@ -41,7 +41,7 @@ jobs:
       
       - name: docker build
         run: |
-          docker build ./src/${{secrets.AppName}}/ -t  ${{secrets.DOCKER_USER}}/${{secrets.AppName}}:${{ github.run_number  }}
+          docker build . -t  ${{secrets.DOCKER_USER}}/${{secrets.AppName}}:${{ github.run_number  }}
       
       - name : docker push
         run: |
