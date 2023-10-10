@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: kubeos-node-template
-  title: Node App with GitHub Actions
+  title: Node App with Docker to K8s
   description: Create a Node service with GitHub Actions workflows, build docker image and deploy to kubernetes
   tags:
     - recommended
@@ -41,6 +41,17 @@ spec:
           ui:options:
             catalogFilter:
               - kind: System
+    - title: Repository details
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
     - title: Provide Docker information
       required:
         - docker_username
