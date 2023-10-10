@@ -118,9 +118,7 @@ spec:
         path:
         targetPath: kubeos/clusters/dev
         values:
-          component_id: ${{ parameters.service_name }}
           description: ${{ parameters.description }}
-          artifact_id: ${{ parameters.service_name }}
           project_name: ${{ parameters.service_name }}
           owner: ${{ parameters.owner }}
           system: ${{ parameters.system }}
