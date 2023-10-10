@@ -2,13 +2,13 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: kubeos-node-template
-  title: Kubeos Node App with Docker to K8s
-  description: Create a Node service with GitHub Actions workflows, build docker image and deploy to kubernetes
+  title: Kubeos K8s Jobs built on node.
+  description: Create a Node Job with GitHub Actions workflows, build docker image and deploy to kubernetes
   tags:
     - recommended
     - nodejs
 spec:
-  owner: sourabh.rustagi@hotmail.com
+  owner: sourabh.rustagi
   type: service
   parameters:
     - title: Provide some simple information

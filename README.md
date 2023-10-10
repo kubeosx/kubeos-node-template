@@ -1,6 +1,6 @@
-# Node.js Express Onboarding Template for KubeOS
+# Node.js Job Template for KubeOS
 
-Welcome to the Node.js Express Onboarding Template for KubeOS! This template streamlines the onboarding process for new developers into a KubeOS-enabled Kubernetes cluster. It utilizes Backstage to simplify resource management and user access while also integrating with GitHub Actions to automate Docker image builds and uploads to Docker Hub.
+Welcome to the Node.js K8s Job Onboarding Template for KubeOS! This template streamlines the onboarding process for new developers into a KubeOS-enabled Kubernetes cluster. It utilizes Backstage to simplify resource management and user access while also integrating with GitHub Actions to automate Docker image builds and uploads to Docker Hub.
 
 ## Overview
 
@@ -25,7 +25,7 @@ Onboarding developers into a KubeOS-enabled cluster can be a complex task, invol
 
 ## Getting Started
 
-To get started with the Node.js Express Onboarding Template and onboard new developers into your KubeOS-enabled cluster, follow these steps:
+To get started with the Node.js K8s Job Onboarding Template and onboard new developers into your KubeOS-enabled cluster, follow these steps:
 
 1. **Clone this Repository**:
 
