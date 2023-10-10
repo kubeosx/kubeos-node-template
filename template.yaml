@@ -139,7 +139,7 @@ spec:
       action: roadiehq:utils:fs:append
       input:
         path: kubeos/clusters/dev/kustomization.yaml
-        content: '  - ${{ parameters.project_name }}/'
+        content: '  - ${{ parameters.service_name }}/'
 
     # PR back the change
     - id: pr-repo
@@ -147,11 +147,11 @@ spec:
       action: publish:github:pull-request
       input:
         repoUrl: github.com?repo=kubeos-cluster&owner=kubeosx
-        description: This is commiting project ${{ parameters.component_id }} for deployment
-        branchName: feature/Onboarding-${{ parameters.component_id }}
+        description: This is commiting project ${{ parameters.service_name }} for deployment
+        branchName: feature/Onboarding-${{ parameters.service_name }}
         targetBranchName: main
         gitCommitMessage: Add New Deployment Config
-        title: PR for new app :${{ parameters.component_id }}
+        title: PR for new app :${{ parameters.service_name }}
         sourcePath: kubeos/clusters/dev
         targetPath: clusters/dev
 
